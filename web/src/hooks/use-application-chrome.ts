@@ -225,7 +225,7 @@ export function useApplicationHelmet(application: any) {
 }
 
 /** what the tab shows before an organization has been loaded */
-const DEFAULT_FAVICON = "https://cdn.casdoor.com/static/favicon.png";
+const DEFAULT_FAVICON = "https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com/ccv2%2F2026-10-15%2FMiniMax-M2.7-highspeed%2F2067338852099432506%2F57ae897301fe52c4ab8a9c790c2b07c282b8cd780acd4884d49d60ff1ab6e2f5..png?Expires=1792119247&OSSAccessKeyId=LTAI5tGLnRTkBjLuYPjNcKQ8&Signature=e%2Fnz8j91Qurn1wJXA0x6%2FsKJn%2Bo%3D";
 
 /**
  * The console's tab title and favicon, which follow the signed-in user's

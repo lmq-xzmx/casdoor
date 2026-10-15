@@ -22,7 +22,7 @@ export let IsDemoMode = false;
 export let ForceLanguage = "";
 export let DefaultLanguage = "en";
 
-export let StaticBaseUrl = "https://cdn.casbin.org";
+export let StaticBaseUrl = "https://minimax-algeng-chat-tts.oss-cn-wulanchabu.aliyuncs.com";
 
 export const ThemeDefault = {
   themeType: "default",
