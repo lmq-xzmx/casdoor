@@ -1,0 +1,30 @@
+# Casdoor 生产环境部署
+# 使用: docker compose -f deploy/production/docker-compose.yml up -d
+
+services:
+  casdoor:
+    image: 100.108.142.49:5000/casdoor:v1.0
+    restart: always
+    ports:
+      - "3011:3012"
+    environment:
+      RUNNING_IN_DOCKER: "true"
+    volumes:
+      - ./conf/app.conf:/conf/app.conf
+      - casdoor_data:/frontend
+    networks:
+      - geo-network
+    command: /bin/sh -c './server --createDatabase=true'
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3012/api/get-account"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  geo-network:
+    external: true
+    name: geo-network
+
+volumes:
+  casdoor_data:
